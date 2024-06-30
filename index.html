@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Agency</title>
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+   <link rel="stylesheet" href="'/style.css">
+   <style>
+      .carousel-item {
+    display: flex; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
+}
+
+.carousel-item.active {
+    opacity: 1; 
+}
+
+    </style>
+    <!-- ---------------- Tailwind cdn -------------- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="max-w-screen-xl mx-auto">
+    <header>
+        <nav>
+            <div class="flex">
+                <div class="bg-[#f71c52] h-4 w-full"></div>
+                <div class="bg-[#554c86] h-4 w-full"></div>
+                <div class="bg-[#39d47a] h-4 w-full"></div>
+            </div>
+            <div class="flex justify-between items-center mt-11 max-w-screen-xl mx-auto px-12">
+                <ul class="flex gap-5 pl-8">
+                    <li><span><i class="las la-phone text-[#f87e9a] pr-2 text-[18px]"></i></span><span
+                            class="hover:text-[#39d47a] font-semibold text-[15px]">+1 631 123 4567</span></li>
+                    <li><span><i class="las la-envelope text-[#f87e9a] pr-2"></i></span><span
+                            class="hover:text-[#39d47a] font-semibold text-[15px]">email@website.com</span></li>
+                </ul>
+                <ul class="flex items-center justify-center gap-1">
+                    <li class="hover:bg-blue-500 hover:text-white w-8 h-8 text-center pt-1 rounded-full cursor-pointer">
+                        <a href="#" class="link-holder fb"><i class="lab la-facebook-f text-xl"></i></a></li>
+                    <li class="hover:bg-sky-400 hover:text-white w-8 h-8 rounded-full text-center pt-1 cursor-pointer">
+                        <a href="#" class="link-holder twit"><i class="lab la-twitter text-xl"></i></a></li>
+                    <li class="hover:bg-sky-700 hover:text-white w-8 h-8 rounded-full text-center pt-1 cursor-pointer">
+                        <a href="#" class="link-holder link-in"><i class="lab la-linkedin-in text-xl"></i></a></li>
+                    <li
+                        class="hover:bg-[#f44e5a] hover:text-white w-8 h-8 rounded-full text-center pt-1 cursor-pointer">
+                        <a href="#" class="link-holder insta"><i class="lab la-instagram text-xl"></i></a></li>
+                    <li class="hover:text-[#f44e5a] w-8 h-8 text-center rounded-full cursor-pointer"><a href="#"
+                            class="link-holder insta text-2xl"><i class="las la-bars"></i></a></li>
+                </ul>
+
+            </div>
+
+            <div class="flex justify-between px-[80px] pt-7">
+                <div>
+                        <div class="bg-black w-[150px] h-[140px] flex  absolute top-32 justify-center items-center ">
+                            <img class=" w-[105px] " src="	https://megaone.acrothemes.com/creative-startup/img/logo.png" alt="">
+                        </div>
+                </div>
+          
+                <div>
+                    <ul class="flex gap-8">
+                        <li class="text-[16px] uppercase font-bold">Home</li>
+                        <li class="text-[16px] uppercase font-bold">About</li>
+                        <li class="text-[16px] uppercase font-bold">PROTFOLIO</li>
+                        <li class="text-[16px] uppercase font-bold">CLIENTS</li>
+                        <li class="text-[16px] uppercase font-bold">BLOG</li>
+                        <li class="text-[16px] uppercase font-bold">CONTACT</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- -----------------Banner section--------------------- -->
+
+        <div class="bg-[#f71c52] h-[90vh] w-[1065px] mt-20">
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            
+                <!-- Carousel Container -->
+                <div class=" relative">
+                 <div class="flex justify-end absolute -right-56 top-[280px]">
+                    <!-- Previous Button -->
+                    <button onclick="prevSlide()"
+                        class="absolute bottom-12 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full shadow-md z-10">
+                        ⇡
+                    </button>
+                    
+                    <!-- Next Button -->
+                    <button onclick="nextSlide()"
+                        class="transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full shadow-md z-10">
+                        ⇣
+                    </button>
+                 </div>
+            
+                    <!-- Carousel Container with Items -->
+                    <div id="" class="carousel-container flex transition-transform  ease-in-out duration-500 justify-center items-center">
+            
+                        <!-- Slide 1 -->
+                        <div class="carousel-item flex  items-center   active ">
+
+                            <div class="pl-12 pt-20"> 
+                                <h1 class="text-[60px] text-white font-bold font-sans">CREATIVE
+                              </h1>
+                                <h1 class="text-[60px] text-white font-bold -mt-8 font-sans mb-9">DIGITAL AGENCY
+                              </h1>
+                              <p class="text-white text-[14px] mb-12">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem <br/> Ipsum has been the industry’s standard dummy.
+                            Lorem Ipsum has been <br/> the industry’s standard dummy.</p>
+                            <button class="uppercase border px-8 py-3 hover:bg-white hover:text-black text-[13px] font-semibold text-white rounded-full">Learn More</button>
+                            </div>
+
+                            <div>
+                                   <img class="w-[520px] object-cover absolute -right-[620px] top-12" src="	https://megaone.acrothemes.com/creative-startup/img/slide1.jpg" alt="">
+
+                            </div>
+
+
+                        </div>
+            
+                        <!-- Slide 2 -->
+                        <div class="carousel-item flex  items-center   active ">
+                        
+                            <div class="pl-12 pt-20">
+                                <h1 class="text-[60px] text-white font-bold font-sans">MODREN
+                                </h1>
+                                <h1 class="text-[60px] text-white font-bold -mt-8 font-sans mb-9">CREATIVE STUDIO
+                                </h1>
+                                <p class="text-white text-[14px] mb-12">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem
+                                    <br /> Ipsum has been the industry’s standard dummy.
+                                    Lorem Ipsum has been <br /> the industry’s standard dummy.</p>
+                                <button
+                                    class="uppercase border px-8 py-3 hover:bg-white hover:text-black text-[13px] font-semibold text-white rounded-full">Learn
+                                    More</button>
+                            </div>
+                        
+                            <div>
+                                <img class="w-[520px] object-cover absolute -right-[600px] top-12"
+                                     src="https://megaone.acrothemes.com/creative-startup/img/slide2.jpg" alt="">
+
+                            </div>
+                        
+                        
+                        </div>
+            
+                        <!-- Slide 3 -->
+                <div class="carousel-item flex  items-center   active ">
+                
+                    <div class="pl-12 pt-20">
+                        <h1 class="text-[60px] text-white font-bold font-sans">STARTUP
+                        </h1>
+                        <h1 class="text-[60px] text-white font-bold -mt-8 font-sans mb-9">MODERN WORKS
+                        </h1>
+                        <p class="text-white text-[14px] mb-12">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem
+                            <br /> Ipsum has been the industry’s standard dummy.
+                            Lorem Ipsum has been <br /> the industry’s standard dummy.</p>
+                        <button
+                            class="uppercase border px-8 py-3 hover:bg-white hover:text-black text-[13px] font-semibold text-white rounded-full">Learn
+                            More</button>
+                    </div>
+                
+                    <div>
+                        <img class="w-[510px] object-cover absolute -right-[610px] top-12"
+                                    src="https://megaone.acrothemes.com/creative-startup/img/slide3.jpg" alt="">
+
+                
+                    </div>
+                
+                
+                </div>
+            
+                  
+            
+                       
+            
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+   
+        </section>
+
+    </header>
+
+    <main>
+
+        <section>
+            <div class="flex mt-3 ml-16 gap-3">
+                <div class="bg-[#554c86] h-[120vh] w-[1080px]">
+                <div class="flex justify-around items-center pt-52">
+                        <div class="">
+                            <i class="las la-briefcase text-[100px] text-white pl-9"></i>
+                            <h1 class="text-[28px] font-sans text-white">Make Business</h1>
+                        </div>
+                        <div>
+                            <i class="las la-lightbulb text-[100px] text-white pl-9"></i>
+                            <h1 class="text-[28px] font-sans text-white">Agency Ideas</h1>
+                        </div>
+
+                </div>
+                    <div class="flex justify-around items-center pt-24">
+                        <div>
+                            <i class="las la-heart text-[100px] text-white pl-9"></i>
+                            <h1 class="text-[28px] font-sans text-white">Our Hardwork</h1>
+                        </div>
+                        <div>
+                            <i class="las la-wallet text-[100px] text-white pl-9"></i>
+                            <h1 class="text-[28px] font-sans text-white">Our Hardwork</h1>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="bg-[#39d47a] h-[120vh] w-full">
+                    <div class="space-y-8 px-12 pt-32">
+                        <h1 class="text-[60px] font-bold text-white">WE ARE <br/><p class="-mt-6">DIGITAL AGENCY</p></h1>
+                        <p class="text-white">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy.
+                        Lorem Ipsum has been the industry’s standard dummy. Lorem ipsum is simply dummy text of the printing and typesetting.
+                        Lorem Ipsum has been the industry’s standard dummy. Lorem Ipsum has been the industry’s standard dummy.</p>
+                        <p class="text-white pb-6">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy.
+                        Lorem Ipsum has been the industry’s standard dummy.</p>
+                        <button
+                            class="uppercase border px-8 py-3  hover:bg-white hover:text-black text-[13px] font-semibold text-white rounded-full">Learn
+                            More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-28">
+            <div class="space-y-2">
+                <p class="text-[#f71c52] font-semibold text-center text-[18px]">Lorem ipsum is simply dummy text</p>
+                <p class="text-[60px] font-bold text-center font-sans">AGENCY STATS & FACTS</p>
+                <p class="text-center text-[#000000] opacity-35">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum <br/> has been the industry’s standard dummy.
+                 Lorem Ipsum has been the industry’s <br/> standard dummy. Lorem ipsum is simply dummy text of the printing and <br/> typesetting.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center max-w-screen-xl mx-auto ml-36  mt-20">
+             <div class="relative size-56">
+            <svg class="size-full" width="96" height="96" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#aa336b;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#943a72;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#f11d53;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+    
+            <circle cx="36" cy="36" r="32" fill="none" stroke="#e2e8f0" stroke-width="5"></circle>
+    
+            <!-- Progress Circle -->
+            <g class="origin-center -rotate-180 transform">
+                <circle cx="36" cy="36" r="32" fill="none" stroke="url(#gradient)" stroke-width="5"
+                    stroke-dasharray="200.96" stroke-dashoffset="52.24" stroke-linecap="round"></circle>
+            </g>
+        </svg>
+    
+        <div class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+            <span class="text-center text-3xl font-normal  text-gray-600">257%</span> 
+        </div>
+        <p class="text-xl text-center pt-5 text-black font-medium opacity-70">Increase in Sales<br/> year on year</p>
+    </div>
+
+
+<div class="relative size-56 ">
+    <svg class="size-full" width="96" height="96" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#aa336b;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#943a72;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#f11d53;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+
+        <circle cx="36" cy="36" r="32" fill="none" stroke="#e2e8f0" stroke-width="5"></circle>
+
+        <g class="origin-center -rotate-180 transform">
+            <circle cx="36" cy="36" r="32" fill="none" stroke="url(#gradient)" stroke-width="5"
+                stroke-dasharray="200.96 20" stroke-dashoffset="10" stroke-linecap="round"></circle>
+        </g>
+    </svg>
+
+    <div class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+        <span class="text-center text-3xl font-normal  text-gray-600">96%</span>
+    </div>
+    <p class="text-xl text-center pt-5 text-black font-medium opacity-70 ">Recommendation <br /> rate over the year</p>
+</div>
+
+
+
+    <div class="relative size-56 "> 
+        <svg class="size-full" width="96" height="96" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+        
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#aa336b;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#943a72;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#f11d53;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+    
+            <!-- Background Circle -->
+            <circle cx="36" cy="36" r="32" fill="none" stroke="#e2e8f0" stroke-width="5"></circle>
+    
+            <g class="origin-center -rotate-180 transform">
+                <circle cx="36" cy="36" r="32" fill="none" stroke="url(#gradient)" stroke-width="5"
+                    stroke-dasharray="200.96 90" stroke-dashoffset="52.24" stroke-linecap="round"></circle>
+            </g>
+        </svg>
+    
+        <div class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+            <span class="text-center text-3xl font-normal  text-gray-600">317%</span>
+        </div>
+        <p class="text-xl text-center pt-5  text-black font-medium opacity-70">New ventures we<br/> became part of</p>
+    </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div>
+                <div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <!-- <section>
+            <div class="flex justify-between">
+                <div>
+                    <h1 class="font-bold text-4xl">GET IN TOUCH</h1>
+                </div>
+
+                <div>
+
+                </div>
+            </div>
+        </section> -->
+
+        <section>
+            <div class="flex mt-32">
+                <div class="bg-[#f71c52] h-4 w-full"></div>
+                <div class="bg-[#554c86] h-4 w-full"></div>
+                <div class="bg-[#39d47a] h-4 w-full"></div>
+            </div>
+            
+        </section>
+        <section class="flex justify-between px-16 mt-20">
+            <div class="">
+                <ul class="flex gap-5">
+                    <li class="hover:bg-[#f71c52] hover:text-white w-8 h-8 text-center pt-1 rounded-full cursor-pointer">
+                        <a href="#" class="link-holder fb"><i class="lab la-facebook-f text-xl"></i></a>
+                    </li>
+                    <li class="hover:bg-[#f71c52] hover:text-white w-8 h-8 rounded-full text-center pt-1 cursor-pointer">
+                        <a href="#" class="link-holder twit"><i class="lab la-twitter text-xl"></i></a>
+                    </li>
+                    <li class="hover:bg-[#f71c52] w-8 h-8 text-center rounded-full cursor-pointer"><a href="#"
+                            class="link-holder insta hover:text-white text-2xl"><i class="lab la-google-plus-g"></i></a></li>
+                    <li class="hover:bg-[#f71c52] hover:text-white w-8 h-8 rounded-full text-center pt-1 cursor-pointer">
+                        <a href="#" class="link-holder link-in"><i class="lab la-linkedin-in text-xl"></i></a>
+                    </li>
+                    <li class="hover:bg-[#f71c52] hover:text-white w-8 h-8 rounded-full text-center pt-1 cursor-pointer">
+                        <a href="#" class="link-holder insta"><i class="lab la-instagram text-xl"></i></a>
+                    </li>
+                    <li class="hover:bg-[#f71c52] hover:text-white w-8 h-8 text-center rounded-full cursor-pointer"><a href="#"
+                            class="link-holder insta text-2xl"><i class="lab la-pinterest-p"></i></a></li>
+               
+               
+                        </ul>
+            </div>
+
+            <div>
+        <h1 class="text-[14px] text-[#2b2b2b]">© 2024 MegaOne. Made With Love By Themesindustry</h1>
+            </div>
+  
+        </section>
+
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+       function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+        }
+
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+    
+        showSlide(currentSlide);
+    </script>
+</body>
+
+</html>
