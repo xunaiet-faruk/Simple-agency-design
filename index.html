@@ -8,21 +8,26 @@
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
    <link rel="stylesheet" href="'/style.css">
-   <style>
-      .carousel-item {
-    display: flex; 
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0; 
-    transition: opacity 0.5s ease-in-out; 
-}
 
-.carousel-item.active {
-    opacity: 1; 
-}
+<style>
+    .carousel-item {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
 
-    </style>
+    .carousel-item.active {
+        opacity: 1;
+    }
+
+ 
+
+   
+</style>
+
     <!-- ---------------- Tailwind cdn -------------- -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -40,6 +45,7 @@
 
 <body class="max-w-screen-xl mx-auto">
     <header>
+        
         <nav>
             <div class="flex">
                 <div class="bg-[#f71c52] h-4 w-full"></div>
@@ -91,13 +97,12 @@
 
         <!-- -----------------Banner section--------------------- -->
 
-        <div class="bg-[#f71c52] h-[90vh] w-[1065px] mt-20">
+        <div class="bg-[#f71c52] lg:h-[90vh] md:h-[95vh] h-[120vh] md:w-full w-full lg:w-[1065px] mt-20 mb-[200px]">
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             
-                <!-- Carousel Container -->
                 <div class=" relative">
-                 <div class="flex justify-end absolute -right-56 top-[280px]">
+                 <div class="flex justify-end  absolute lg:-right-56 md:-right-1 lg:top-[280px]">
                     <!-- Previous Button -->
                     <button onclick="prevSlide()"
                         class="absolute bottom-12 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full shadow-md z-10">
@@ -111,24 +116,22 @@
                     </button>
                  </div>
             
-                    <!-- Carousel Container with Items -->
-                    <div id="" class="carousel-container flex transition-transform  ease-in-out duration-500 justify-center items-center">
-            
+                    <div id="" class="carousel-container flex  transition-transform  ease-in-out duration-500 justify-center items-center">
                         <!-- Slide 1 -->
-                        <div class="carousel-item flex  items-center   active ">
+                        <div class="carousel-item flex   items-center ">
 
                             <div class="pl-12 pt-20"> 
-                                <h1 class="text-[60px] text-white font-bold font-sans">CREATIVE
+                                <h1 class="lg:text-[60px] md:text-[20px] text-white font-bold font-sans">CREATIVE
                               </h1>
-                                <h1 class="text-[60px] text-white font-bold -mt-8 font-sans mb-9">DIGITAL AGENCY
+                                <h1 class="lg:text-[60px] md:text-[20px] text-white font-bold lg:-mt-8 font-sans mb-9">DIGITAL AGENCY
                               </h1>
-                              <p class="text-white text-[14px] mb-12">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem <br/> Ipsum has been the industry’s standard dummy.
+                              <p class="text-white md:text-[9px] lg:text-[14px] mb-12">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem <br/> Ipsum has been the industry’s standard dummy.
                             Lorem Ipsum has been <br/> the industry’s standard dummy.</p>
                             <button class="uppercase border px-8 py-3 hover:bg-white hover:text-black text-[13px] font-semibold text-white rounded-full">Learn More</button>
                             </div>
 
                             <div>
-                                   <img class="w-[520px] object-cover absolute -right-[620px] top-12" src="	https://megaone.acrothemes.com/creative-startup/img/slide1.jpg" alt="">
+                                   <img class="lg:w-[520px] md:w-[400px] object-cover absolute md:-right-[400px] lg:-right-[620px] top-12" src="	https://megaone.acrothemes.com/creative-startup/img/slide1.jpg" alt="">
 
                             </div>
 
@@ -136,7 +139,7 @@
                         </div>
             
                         <!-- Slide 2 -->
-                        <div class="carousel-item flex  items-center   active ">
+                        <div class="carousel-item flex  items-center    ">
                         
                             <div class="pl-12 pt-20">
                                 <h1 class="text-[60px] text-white font-bold font-sans">MODREN
@@ -161,7 +164,7 @@
                         </div>
             
                         <!-- Slide 3 -->
-                <div class="carousel-item flex  items-center   active ">
+                <div class="carousel-item flex  items-center    ">
                 
                     <div class="pl-12 pt-20">
                         <h1 class="text-[60px] text-white font-bold font-sans">STARTUP
@@ -269,7 +272,7 @@
             <circle cx="36" cy="36" r="32" fill="none" stroke="#e2e8f0" stroke-width="5"></circle>
     
             <!-- Progress Circle -->
-            <g class="origin-center -rotate-180 transform">
+             <g class="origin-center -rotate-180 transform">
                 <circle cx="36" cy="36" r="32" fill="none" stroke="url(#gradient)" stroke-width="5"
                     stroke-dasharray="200.96" stroke-dashoffset="52.24" stroke-linecap="round"></circle>
             </g>
@@ -280,7 +283,6 @@
         </div>
         <p class="text-xl text-center pt-5 text-black font-medium opacity-70">Increase in Sales<br/> year on year</p>
     </div>
-
 
 <div class="relative size-56 ">
     <svg class="size-full" width="96" height="96" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
@@ -305,7 +307,7 @@
         <span class="text-center text-3xl font-normal  text-gray-600">96%</span>
     </div>
     <p class="text-xl text-center pt-5 text-black font-medium opacity-70 ">Recommendation <br /> rate over the year</p>
-</div>
+</div> 
 
 
 
@@ -338,33 +340,170 @@
 
         </section>
 
-        <section>
-            <div>
+
+        <section class="bg-[#f71c52] h-[100vh] w-[1190px] mt-48 ">
+           <div class="flex pt-32 px-12 justify-between gap-20">
+
+            <div class="flex flex-col  items-center justify-center space-y-4">
+                <h1 class="font-bold text-[60px] text-white">WE HAVE
+                    <p class="-mt-6">AMAZING</p> 
+                    <p class="-mt-6">TEAM</p>
+                </h1>
+                <p class="text-white w-[300px] pl-4">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the
+                    industry’s standard dummy.</p>
+            </div>
+            
+            <div class="flex gap-7 justify-center items-center">
+
+                <div class="bg-white hover:bg-black rounded-full hover:text-white w-8 h-8 px-3 cursor-pointer flex justify-center items-center">
+                    <i class="las la-angle-left hover:text-white  text-[14px] font-bold"></i>
+                </div>
+            
                 <div>
+                    <img class="w-[600px]" src="https://megaone.acrothemes.com/creative-startup/img/team1.jpg" alt="">
+                    <p class="text-xl text-center text-white pt-5 font-semibold">Eden Wooderburg</p>
+                    <p class="text-md text-white text-center">Design Lead</p>
+                </div>
+                <div>
+                    <img  class="w-[600px]" src="https://megaone.acrothemes.com/creative-startup/img/team2.jpg" alt="">
+                    <p class="text-xl text-center text-white pt-5 font-semibold">Angelo Walking</p>
+                    <p class="text-md text-white text-center">Creative Head</p>
+                </div>
+
+                <div
+                    class="bg-white hover:bg-black rounded-full hover:text-white w-8 h-8 px-3 cursor-pointer flex justify-center items-center">
+                    <i class="las la-angle-right hover:text-white  text-[14px] font-bold"></i>
+                </div>
+
+            </div>
+
+           </div>
+        </section>
+
+
+        <section class="bg-[#554c86] h-[90vh] w-[1183px] ml-20 mt-32">
+
+           <div class="flex justify-between px-14">
+            
+            <div class="space-y-12 mt-28">
+                <h1 class="text-[60px] font-bold text-white">SATISFIED<br />
+                    <p class="-mt-8">CUSTOMERS</p>
+                </h1>
+                <p class="text-white">Lorem ipsum is simply dummy text of the printing<br /> and typesetting. Lorem Ipsum has been
+                    the <br /> industry’s standard dummy.</p>
+            </div>
+
+        <div class="mt-16 flex flex-col justify-center items-center space-y-5  mr-20">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="w-9 italic h-9 mb-4" viewBox="0 0 975.036 975.036">
+                <path
+                    d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+                </path>
+            </svg>
+
+            <p class="text-center text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce <br/> vitae egestas mi, vel dapibus diam. Mauris malesuada,
+            nisl non <br/> rutrum commodo, sem magna laoreet tellus, eu euismod dolor <br/> enim et mi. In at tempor purus.</p>
+            <img class="rounded-full" src="https://megaone.acrothemes.com/creative-startup/img/test2.jpg" alt="">
+            <p class="text-white text-xl font-semibold">Julia Miltese</p>
+        
+        </div>
+
+           </div>
+
+        </section>
+
+        <section class="flex mt-24 gap-12 max-w-screen-xl mx-auto my-24  ml-20">
+        
+                <img class="" src="https://megaone.acrothemes.com/creative-startup/img/brand4.png" alt="">
+                <img src="https://megaone.acrothemes.com/creative-startup/img/brand4.png" alt="">
+                <img src="https://megaone.acrothemes.com/creative-startup/img/brand4.png" alt="">
+                <img src="https://megaone.acrothemes.com/creative-startup/img/brand4.png" alt="">
+                <img src="https://megaone.acrothemes.com/creative-startup/img/brand4.png" alt="">
+                <img src="https://megaone.acrothemes.com/creative-startup/img/brand4.png" alt="">
+            
+        </section>
+
+
+    <section>
+            <div class="bg-[#39d47a] h-[90vh] w-[815px] mt-20">
+            
+                <div class="flex justify-between items-center">
+                
+                    <div class="space-y-7 pl-20 mt-20">
+                        <h1 class="text-[60px] font-bold text-white ">LATEST<br/>
+                       <p class="-mt-5">DESIGN BLOGS</p></h1>
+                        <p class="text-white w-96">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy.</p>
+                        <button
+                            class="uppercase border px-8 py-3  hover:bg-white hover:text-black text-[13px] font-semibold text-white rounded-full">Learn
+                            More</button>
+                    </div>
+
+                    <div class="absolute left-[650px] mt-28">
+                      <img class="w-[530px] " src="https://megaone.acrothemes.com/creative-startup/img/blog1.png" alt="">
+
+                    </div>
 
                 </div>
+                </div>
             </div>
-        </section>
+    </section>
+
+
+    <section>
+        <div class="mt-32">
+            <h1 class="text-[40px] font-bold ml-20">GET IN TOUCH</h1>
+         <div class="flex items-center justify-around -mt-20">
+            <div class="flex gap-3 ">
+                <div class="flex flex-col gap-5">
+                    <input class="border-2  border-[#eceef2] py-3 w-52 px-2 " placeholder="YOUR NAME" type="text" name="" id="">
+                    <input class="border-2 border-[#eceef2] py-3 w-52 px-2 " placeholder="Email Address" type="text" name="" id="">
+                    <input class="border-2 border-[#eceef2] py-3 w-52 px-2 " placeholder="Subject" type="text" name="" id="">
+                    <button class="bg-[#554c86] hover:bg-[#f71c52] transition-colors duration-300 ease-in-out font-semibold text-white w-[570px] py-2 rounded-full">Send Message</button>
+
+                </div>
+                <div class=" h-[200px] -ml-[340px]">
+                    <textarea class="border-2  border-[#eceef2] py-3 px-2" rows="7" cols="40" name="" placeholder="Your Message"
+                        id=""></textarea>
+                </div>
+            </div>
+            
+            <div class="space-y-6 mb-28">
+                <h1 class="text-[40px] font-bold pb-5 mt-4">OUR LOCATION</h1>
+                <p class="pb-4 text-[#000000] opacity-55">There are many variations of passages of Lorem <br/> Ipsum available, but the majority have suffered .</p>
+                <div class="space-y-8">
+                   <div class="flex items-center gap-5">
+                    <i class="las la-map-marker text-[44px] text-[#f71c52]"></i>
+                    <p class="text-[#000000] opacity-55">123 Park Avenue, <br/>New York, United States</p>
+                    
+                   </div>
+                   <div class="flex items-center gap-5">
+                <i class="las la-phone-volume text-[38px] text-[#554c86]"></i>
+                    <p class="text-[#000000] opacity-55">+1 631 1234 5678
+                    +1 631 1234 5678</p>
+                    
+                   </div>
+                   <div class="flex items-center gap-5">
+                <i class="las la-location-arrow rotate-45 text-[38px] text-[#39d47a]"></i>
+                    <p class="text-[#000000] opacity-55">email@website.com
+                    </p>
+                    
+                   </div>
+                </div>
+            </div>
+
+         </div>
+           
+        </div>
+        <div></div>
+    </section> 
 
     </main>
 
 
-    <footer>
+    <footer class="mb-20">
 
-        <!-- <section>
-            <div class="flex justify-between">
-                <div>
-                    <h1 class="font-bold text-4xl">GET IN TOUCH</h1>
-                </div>
-
-                <div>
-
-                </div>
-            </div>
-        </section> -->
 
         <section>
-            <div class="flex mt-32">
+            <div class="flex mt-2 ">
                 <div class="bg-[#f71c52] h-4 w-full"></div>
                 <div class="bg-[#554c86] h-4 w-full"></div>
                 <div class="bg-[#39d47a] h-4 w-full"></div>
@@ -401,6 +540,7 @@
   
         </section>
 
+
     </footer>
 
     <script>
@@ -430,6 +570,7 @@
 
     
         showSlide(currentSlide);
+        
     </script>
 </body>
 
